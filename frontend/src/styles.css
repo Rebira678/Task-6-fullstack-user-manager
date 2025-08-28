@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glass + noise for ultra-attractive background */
+:root { 
+  --glass: rgba(255, 215, 0, 0.08); /* subtle gold glass */
+  --border: rgba(255, 215, 0, 0.15); /* subtle gold border */
+}
+
+body {
+  @apply min-h-screen text-white;
+  background: linear-gradient(-45deg, #0b0f13, #1a1e23, #121619, #1f242a);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+}
+
+
+/* Gradient animation keyframes */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-hero {
+  background: none; /* removes all radial gradients */
+  filter: none;     /* removes any extra saturation/contrast effects */
+}
+
+.card-glass { 
+  background: rgba(0, 0, 0, 0.15); /* subtle dark glass instead of white tint */
+  backdrop-filter: blur(12px); 
+  border: 1px solid var(--border); 
+}
+
+.input { 
+  @apply w-full rounded-2xl bg-black/10 border border-yellow-500/20 px-4 py-3 text-sm placeholder-yellow-200/50 focus:outline-none focus:ring-2 focus:ring-yellow-400; 
+}
+
+.btn { 
+  @apply inline-flex items-center justify-center rounded-2xl px-4 py-2 font-medium border border-yellow-500/20 bg-black/10 hover:bg-black/20 active:scale-[.98]; 
+}
+
+.btn-primary { 
+  @apply bg-yellow-600/80 hover:bg-yellow-500; 
+}
+
+.badge { 
+  @apply text-xs rounded-full px-2 py-0.5 border border-yellow-500/20 bg-black/10 text-yellow-300; 
+}
+
+.skeleton { 
+  position: relative; 
+  overflow: hidden; 
+}
+
+.skeleton::after { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  transform: translateX(-100%); 
+  background: linear-gradient(90deg, transparent, rgba(255,215,0,.08), transparent); 
+  animation: shimmer 1.6s infinite; 
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
