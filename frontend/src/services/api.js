@@ -1,7 +1,10 @@
 import axios from "axios";
 
+// Use your Render backend URL here
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:4000/api",
+  baseURL: "https://task-6-fullstack-user-manager-4.onrender.com/api",
+  // If you want to use environment variables instead:
+  // baseURL: import.meta.env.VITE_API_URL
 });
 
 export const Auth = {
