@@ -1,57 +1,94 @@
-# Fullstack User Manager
+---
+# Task-6 Fullstack User Management System
 
-A **Full-Stack User Management Application** built with **React**, **Tailwind CSS**, **Node.js**, **Express**, **MongoDB**, and **Docker**.  
-Designed as a single-page app to **create, view, update, and delete users** with roles and status management.
-
+This project is a **Fullstack User Management System** developed during my **Saiket Internship**. It demonstrates my skills in **React, Node.js, Express, MongoDB, TailwindCSS**, and deployment using **Render & Vercel**. The system also includes **Docker support** for easier setup and deployment.
 ---
 
 ## Features
 
-- ✅ **User CRUD:** Create, Read, Update, Delete users
-- ✅ **Role Assignment:** Admin, Manager, or User
-- ✅ **Status Management:** Active, Inactive, or Banned
-- ✅ **Search & Filter:** Quick search by name, email, or role
-- ✅ **Responsive Design:** Works on desktop and mobile
-- ✅ **Modern UI:** Tailwind CSS, Glassmorphism, and smooth animations
-- ✅ **Dockerized Backend:** Easy setup and deployment
+- **User Management:** Create, Read, Update, Delete (CRUD) users
+- **Roles:** User, Manager, Admin
+- **Status Management:** Active, Inactive, Banned
+- **User Profile:** Avatar upload and short bio
+- **Responsive UI:** Mobile-friendly design with TailwindCSS
+- **About Modal:** View detailed user information
+- **Dockerized:** Run backend and frontend easily using Docker
 
 ---
 
-## Tech Stack
+## Technologies Used
 
 **Frontend:**
 
-- React 18
-- Tailwind CSS
-- HTML5 & CSS3
+- React
+- TailwindCSS
+- Vite
 
 **Backend:**
 
-- Node.js & Express.js
-- MongoDB (via Docker)
-- Validation with Yup
+- Node.js
+- Express.js
+- MongoDB (Atlas)
+- RESTful API
 
-**Tools:**
+**Deployment & Containerization:**
 
-- Docker
-- Nodemon
-- VS Code / IDE of choice
+- Frontend: Vercel
+- Backend: Render
+- Docker: For containerized local development and deployment
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js >= 18
-- npm >= 9
-- Docker
-
-### Installation
+## Installation
 
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/<your-username>/fullstack-user-manager.git
-cd fullstack-user-manager
+git clone https://github.com/Rebira678/Task-6-fullstack-user-manager.git
 ```
+
+2. **Backend setup (without Docker):**
+
+```bash
+cd backend
+npm install
+cp .env.example .env
+# Fill in your MongoDB URI and other environment variables
+npm start
+```
+
+3. **Frontend setup (without Docker):**
+
+```bash
+cd frontend
+npm install
+npm run build
+npm run dev
+```
+
+4. **Docker setup (optional, recommended):**
+
+```bash
+docker-compose up --build
+# This will start both backend and frontend in containers
+```
+
+---
+
+## Usage
+
+1. Open the frontend in your browser (usually at `http://localhost:5173/`).
+2. Manage users using the dashboard:
+
+   - Add new users
+   - Edit user information
+   - Delete users
+   - View detailed user info via the About modal
+
+---
+
+## Demo Video
+
+A demo video showcasing the full functionality is available [https://www.linkedin.com/posts/rebira-adugna-6496b2373_saiketsystemsjourney-saiketexperience-saiketsystems-activity-7367132700119388161-njd_?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAFx5RBkBe6R3XKHOf7g83HTxozwd19yiytE&utm_campaign=copy_link].
+
+---
